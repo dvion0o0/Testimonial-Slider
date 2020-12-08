@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+
+:root{
+    --darkBlue:hsl(240, 38%, 20%);
+    --grayBlue:hsl(240, 18%, 77%);
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--darkBlue);
+}
+
+h3{
+    font-weight: 700;
+}
+
+
+.container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background:url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+}
+
+.container-center{
+    margin: 4rem auto;
+    width: 85vw;
+}
+
+.img-container{
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-image: url(./images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+.img{
+    width: 90%;
+    border-radius: 20px;
+}
+
+.controls{
+    background: #ffffff;;
+    width:100px;
+    padding: 1rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 30px;
+    transform: translateY(-50%);
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.next{
+    justify-self: end;
+}
+
+.text-container{
+    display:grid;
+    place-items: center;
+    text-align: center;
+    background: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center -1rem;
+    padding: 3rem 0 2rem 0;
+}
+
+.text-container p{
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.text-container h3{
+    margin-bottom: 0.5rem;
+}
+
+.designation{
+    color: var(--grayBlue);
+    font-weight: 500;
+}
+
+@media screen and (min-width:768px){
+.container{
+    background-size:700px
+}
+
+    .container-center{
+        width: 90vw;
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+    }
+
+
+.img-container{
+    order: 1;
+}
+
+.text-container{
+    text-align:left;
+    place-items: start;
+    align-self: center;
+    transform: translateX(15%);
+    background-position: left top;
+}
+
+.text-container p{
+    margin-bottom: 1rem;
+    font-size: 28px;
+}
+
+.text-container h3{
+    margin-bottom: 0;
+    float: left;
+    margin-right: 1rem;
+}
+
+
+}
